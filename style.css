@@ -1,0 +1,1951 @@
+/* =========================================================
+   SYAHRU STORE
+   MODERN RESPONSIVE E-COMMERCE
+   DARK / LIGHT / HACKER MODE
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --bg: #080b13;
+    --section: #0d121c;
+    --card: #111622;
+    --card-hover: #171d2c;
+
+    --text: #f4f6ff;
+    --muted: #929bae;
+
+    --pink: #ff2f76;
+    --pink-dark: #e51f64;
+    --cyan: #43dff4;
+
+    --border: rgba(255, 255, 255, 0.09);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 90% 5%,
+            rgba(255, 47, 118, 0.11),
+            transparent 28rem
+        ),
+        radial-gradient(
+            circle at 0% 35%,
+            rgba(67, 223, 244, 0.06),
+            transparent 25rem
+        ),
+        var(--bg);
+
+    transition:
+        background-color var(--transition),
+        color var(--transition);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    padding: 12px 0;
+
+    background: rgba(8, 11, 19, 0.92);
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(16px);
+
+    transition:
+        background-color var(--transition),
+        border-color var(--transition);
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-brand:hover {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.brand-icon svg {
+    width: 20px;
+    height: 20px;
+
+    transition: transform var(--transition);
+}
+
+.navbar-brand:hover .brand-icon {
+    transform: translateY(-2px) scale(1.05);
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 0 18px rgba(67, 223, 244, 0.35);
+}
+
+.navbar-brand:hover .brand-icon svg {
+    transform: rotate(-6deg);
+}
+
+.brand-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.brand-accent {
+    margin-left: 2px;
+    color: var(--pink);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-link {
+    margin-left: 8px;
+
+    color: var(--muted) !important;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition:
+        color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   DIGITAL CLOCK
+========================================================= */
+
+.digital-clock {
+    margin-left: auto;
+    margin-right: 10px;
+
+    padding: 8px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 9px;
+
+    color: #fff;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    font-family: "Share Tech Mono", monospace;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   THEME SELECTOR
+========================================================= */
+
+.mode-selector {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 4px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    white-space: nowrap;
+}
+
+.mode-btn {
+    padding: 7px 9px;
+
+    border: none;
+    border-radius: 7px;
+
+    color: #9da7b5;
+    background: transparent;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.mode-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.mode-btn.active {
+    color: #111827;
+    background: #fff;
+
+    box-shadow:
+        0 4px 12px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   CART COUNTER
+========================================================= */
+
+.cart-counter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    margin-left: 8px;
+
+    color: var(--text);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.cart-counter span {
+    min-width: 22px;
+    height: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+    background: var(--pink);
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 0 80px;
+
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(255, 47, 118, 0.08),
+            transparent 28rem
+        );
+}
+
+.label {
+    margin-bottom: 14px;
+
+    color: var(--pink);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    margin: 0;
+
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 800;
+
+    line-height: 1.05;
+    letter-spacing: -0.06em;
+}
+
+.hero h1 span {
+    color: var(--pink);
+}
+
+.hero-text {
+    max-width: 650px;
+
+    margin: 22px 0 28px;
+
+    color: var(--muted);
+
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.btn-main {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    color: #fff;
+    background: var(--pink);
+
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 30px rgba(255, 47, 118, 0.2);
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+}
+
+.btn-main:hover {
+    color: #fff;
+    background: var(--pink-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(255, 47, 118, 0.28);
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.product-section {
+    padding: 70px 0 90px;
+
+    background: var(--section);
+
+    transition:
+        background-color var(--transition);
+}
+
+.section-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: -0.04em;
+}
+
+.product-count {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 17px;
+
+    background: var(--card);
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.product-card:hover {
+    border-color: rgba(255, 47, 118, 0.4);
+
+    background: var(--card-hover);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 4 / 3;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.product-badge {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 2;
+
+    padding: 6px 9px;
+
+    border-radius: 6px;
+
+    color: #fff;
+    background: var(--pink);
+
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+========================================================= */
+
+.product-content {
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product-content small {
+    color: var(--cyan);
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.product-content h3 {
+    margin: 7px 0 8px;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.product-content p {
+    min-height: 52px;
+
+    margin: 0 0 15px;
+
+    color: var(--muted);
+
+    font-size: 0.83rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.price strong {
+    font-size: 1rem;
+}
+
+.price span {
+    color: #ffd25a;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCT BUTTON
+========================================================= */
+
+.btn-product {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 9px 12px;
+
+    border: 1px solid rgba(255, 47, 118, 0.45);
+    border-radius: 8px;
+
+    color: #fff;
+    background: rgba(255, 47, 118, 0.08);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.btn-product:hover {
+    color: #fff;
+    background: var(--pink);
+    border-color: var(--pink);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    padding: 80px 0;
+
+    background: var(--bg);
+}
+
+.about-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 47, 118, 0.05),
+            rgba(67, 223, 244, 0.03)
+        );
+}
+
+.about-box h2 {
+    margin-bottom: 18px;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.about-box p:not(.label) {
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+.student-info span {
+    color: var(--muted);
+
+    font-size: 0.8rem;
+}
+
+.student-info strong {
+    color: var(--pink);
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 40px 0 25px;
+
+    background: #06080e;
+
+    border-top: 1px solid var(--border);
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.footer-main h3 {
+    margin: 0;
+
+    font-size: 1.1rem;
+}
+
+.footer-main p {
+    margin: 7px 0 0;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.footer-links a {
+    color: var(--muted);
+
+    font-size: 0.8rem;
+    text-decoration: none;
+
+    transition:
+        color var(--transition);
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 30px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    font-size: 0.75rem;
+}
+
+.footer-bottom span:first-child {
+    color: #e2e8f0;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-bottom span:last-child {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+body.light-mode {
+    --bg: #f5f7fa;
+    --section: #f5f7fa;
+
+    --card: #ffffff;
+    --card-hover: #ffffff;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+
+    --border: rgba(0, 0, 0, 0.09);
+
+    background:
+        radial-gradient(
+            circle at 90% 5%,
+            rgba(255, 47, 118, 0.05),
+            transparent 28rem
+        ),
+        #f5f7fa;
+
+    color: #1f2937;
+}
+
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.94);
+
+    border-bottom-color: #e5e7eb;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .navbar-brand {
+    color: #111827;
+}
+
+body.light-mode .brand-icon {
+    background: #fff;
+    border-color: #e5e7eb;
+}
+
+body.light-mode .brand-name {
+    color: #111827;
+}
+
+body.light-mode .nav-link {
+    color: #596273 !important;
+}
+
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active {
+    color: #111827 !important;
+}
+
+body.light-mode .digital-clock {
+    color: #111827;
+
+    background: #f1f3f6;
+    border-color: #e1e5eb;
+}
+
+body.light-mode .mode-selector {
+    background: #f1f3f6;
+    border-color: #e1e5eb;
+}
+
+body.light-mode .mode-btn {
+    color: #667085;
+}
+
+body.light-mode .mode-btn:hover {
+    color: #111827;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .mode-btn.active {
+    color: #fff;
+    background: #172033;
+}
+
+body.light-mode .hero h1 {
+    color: #111827;
+}
+
+body.light-mode .product-card {
+    background: #fff;
+    border-color: #e5e7eb;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .product-card:hover {
+    background: #fff;
+
+    border-color: rgba(255, 47, 118, 0.3);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .product-content h3 {
+    color: #111827;
+}
+
+body.light-mode .btn-product {
+    color: #111827;
+}
+
+body.light-mode .about {
+    background: #fff;
+}
+
+body.light-mode .about-box {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 47, 118, 0.05),
+            rgba(67, 223, 244, 0.03)
+        );
+
+    border-color: #e5e7eb;
+}
+
+body.light-mode footer {
+    background: #111827;
+}
+
+
+/* =========================================================
+   HACKER MODE
+========================================================= */
+
+body.hacker-mode {
+    --bg: #000;
+    --section: #000;
+
+    --card: #020b05;
+    --card-hover: #031408;
+
+    --text: #00ff41;
+    --muted: #00a82b;
+
+    --border: rgba(0, 255, 65, 0.35);
+
+    color: #00ff41;
+
+    background: #000;
+
+    font-family:
+        "Share Tech Mono",
+        "Courier New",
+        monospace;
+}
+
+
+/* Cyber Grid */
+
+body.hacker-mode::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 999;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    background:
+        linear-gradient(
+            rgba(0, 255, 65, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 65, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+}
+
+
+/* Scanline */
+
+body.hacker-mode::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0, 255, 65, 0.025),
+            rgba(0, 255, 65, 0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+}
+
+
+/* Hacker Navbar */
+
+body.hacker-mode .navbar {
+    background: rgba(0, 0, 0, 0.96);
+
+    border-bottom-color: #00ff41;
+
+    box-shadow:
+        0 0 18px rgba(0, 255, 65, 0.12);
+}
+
+body.hacker-mode .navbar-brand,
+body.hacker-mode .brand-name,
+body.hacker-mode .brand-accent {
+    color: #00ff41;
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+body.hacker-mode .brand-icon {
+    background: #001a08;
+    border-color: #00ff41;
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+body.hacker-mode .brand-icon svg path {
+    fill: #00ff41 !important;
+    stroke: #00ff41 !important;
+}
+
+body.hacker-mode .nav-link {
+    color: #00a82b !important;
+}
+
+body.hacker-mode .nav-link:hover,
+body.hacker-mode .nav-link.active {
+    color: #00ff41 !important;
+
+    text-shadow:
+        0 0 8px #00ff41;
+}
+
+
+/* Hacker Clock */
+
+body.hacker-mode .digital-clock {
+    color: #00ff41;
+
+    background: #001a08;
+    border-color: #00ff41;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 65, 0.25);
+
+    text-shadow:
+        0 0 6px #00ff41;
+}
+
+
+/* Hacker Theme Selector */
+
+body.hacker-mode .mode-selector {
+    background: #001a08;
+    border-color: #006b1c;
+}
+
+body.hacker-mode .mode-btn {
+    color: #00a82b;
+}
+
+body.hacker-mode .mode-btn:hover {
+    color: #00ff41;
+
+    background: rgba(0, 255, 65, 0.08);
+
+    text-shadow:
+        0 0 7px #00ff41;
+}
+
+body.hacker-mode .mode-btn.active {
+    color: #000;
+    background: #00ff41;
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 65, 0.5);
+}
+
+
+/* Hacker Hero */
+
+body.hacker-mode .hero {
+    background:
+        linear-gradient(
+            rgba(0, 255, 65, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 65, 0.025) 1px,
+            transparent 1px
+        ),
+        #000;
+
+    background-size: 35px 35px;
+}
+
+body.hacker-mode .label,
+body.hacker-mode .hero h1,
+body.hacker-mode .hero h1 span {
+    color: #00ff41;
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+body.hacker-mode .hero-text {
+    color: #00b833;
+}
+
+
+/* Hacker Main Button */
+
+body.hacker-mode .btn-main {
+    color: #000;
+    background: #00ff41;
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+body.hacker-mode .btn-main:hover {
+    color: #00ff41;
+    background: #000;
+
+    border: 1px solid #00ff41;
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 65, 0.5);
+}
+
+
+/* Hacker Product */
+
+body.hacker-mode .product-section,
+body.hacker-mode .about {
+    background: #000;
+}
+
+body.hacker-mode .section-title h2 {
+    color: #00ff41;
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 65, 0.35);
+}
+
+body.hacker-mode .product-count {
+    color: #008f29;
+}
+
+body.hacker-mode .product-card {
+    background: #020b05;
+    border-color: #006b1c;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 65, 0.08);
+}
+
+body.hacker-mode .product-card:hover {
+    background: #031408;
+    border-color: #00ff41;
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 65, 0.3);
+}
+
+body.hacker-mode .product-content small,
+body.hacker-mode .product-content h3,
+body.hacker-mode .price strong,
+body.hacker-mode .price span {
+    color: #00ff41;
+}
+
+body.hacker-mode .product-content p {
+    color: #00a82b;
+}
+
+body.hacker-mode .product-badge {
+    color: #000;
+    background: #00ff41;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 65, 0.35);
+}
+
+body.hacker-mode .btn-product {
+    color: #00ff41;
+    background: rgba(0, 255, 65, 0.06);
+    border-color: #008f29;
+}
+
+body.hacker-mode .btn-product:hover {
+    color: #000;
+    background: #00ff41;
+    border-color: #00ff41;
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 65, 0.4);
+}
+
+
+/* Hacker About */
+
+body.hacker-mode .about-box {
+    background: #020b05;
+    border-color: #006b1c;
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 65, 0.08);
+}
+
+body.hacker-mode .about-box h2,
+body.hacker-mode .student-info strong {
+    color: #00ff41;
+}
+
+body.hacker-mode .about-box p:not(.label) {
+    color: #00a82b;
+}
+
+
+/* Hacker Footer */
+
+body.hacker-mode footer {
+    background: #000;
+    border-top-color: #006b1c;
+}
+
+body.hacker-mode .footer-main h3,
+body.hacker-mode .footer-bottom span:first-child {
+    color: #00ff41;
+}
+
+body.hacker-mode .footer-main p,
+body.hacker-mode .footer-links a,
+body.hacker-mode .footer-bottom span:last-child {
+    color: #008f29;
+}
+
+body.hacker-mode .footer-links a:hover {
+    color: #00ff41;
+}
+
+
+/* Hacker Cart */
+
+body.hacker-mode .cart-counter {
+    color: #00ff41;
+}
+
+body.hacker-mode .cart-counter span {
+    color: #000;
+    background: #00ff41;
+}
+
+
+/* =========================================================
+   NAVBAR TOGGLER
+========================================================= */
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+body.hacker-mode .navbar-toggler {
+    border-color: #00ff41;
+}
+
+body.hacker-mode .navbar-toggler-icon {
+    filter:
+        invert(72%)
+        sepia(95%)
+        saturate(1500%)
+        hue-rotate(70deg)
+        brightness(110%);
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    border: 1px solid var(--border);
+
+    color: var(--text);
+    background: var(--card);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.toast-header {
+    color: var(--text);
+    background: var(--card);
+
+    border-bottom-color: var(--border);
+}
+
+.toast-body {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .digital-clock {
+        margin-left: auto;
+
+        font-size: 12px;
+        padding: 7px 9px;
+    }
+
+    .mode-selector {
+        order: 2;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-top: 10px;
+    }
+
+    .cart-counter {
+        margin-right: 10px;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 9px 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+
+    .brand-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .brand-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .digital-clock {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 6px 7px;
+        margin-right: 5px;
+    }
+
+    .cart-counter {
+        font-size: 0.75rem;
+    }
+
+    .mode-selector {
+        gap: 3px;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding: 4px;
+    }
+
+    .mode-btn {
+        min-width: 80px;
+        flex: 1;
+
+        font-size: 9px;
+        padding: 7px 6px;
+    }
+
+    .hero {
+        min-height: 580px;
+        padding-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .section-title {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .product-content {
+        padding: 16px;
+    }
+
+    .about-box {
+        padding: 25px 20px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+}
+/* =========================================================
+   HERO PRODUCT SHOWCASE
+========================================================= */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    position: relative;
+    width: 52%;
+    z-index: 2;
+}
+
+.hero-showcase {
+    position: relative;
+    width: 48%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1000px;
+}
+
+/* GLOW */
+.showcase-glow {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 47, 118, 0.30) 0%,
+            rgba(255, 47, 118, 0.14) 35%,
+            rgba(67, 223, 244, 0.08) 55%,
+            transparent 72%
+        );
+
+    filter: blur(8px);
+
+    animation: showcaseGlow 4s ease-in-out infinite;
+}
+
+/* CARD */
+.showcase-card {
+    position: relative;
+    z-index: 5;
+
+    width: 350px;
+    min-height: 430px;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 29, 43, 0.95),
+            rgba(8, 11, 19, 0.98)
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.50),
+        0 0 50px rgba(255, 47, 118, 0.08);
+
+    backdrop-filter: blur(18px);
+
+    transform:
+        rotateY(-8deg)
+        rotateX(3deg);
+
+    animation: showcaseFloat 5s ease-in-out infinite;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.showcase-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--pink),
+            transparent
+        );
+}
+
+/* LABEL */
+.showcase-label {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255, 47, 118, 0.35);
+    border-radius: 999px;
+
+    color: var(--pink);
+
+    background:
+        rgba(255, 47, 118, 0.08);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+/* PRODUCT IMAGE */
+.product-visual {
+    position: relative;
+
+    width: 100%;
+    height: 250px;
+
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 47, 118, 0.22),
+            transparent 70%
+        );
+}
+
+.product-visual img {
+    position: relative;
+    z-index: 2;
+
+    width: 270px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transform: rotate(-7deg);
+
+    filter:
+        drop-shadow(
+            0 25px 25px rgba(0, 0, 0, 0.55)
+        );
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.showcase-card:hover .product-visual img {
+    transform:
+        rotate(-3deg)
+        scale(1.06);
+}
+
+/* INFO */
+.showcase-info {
+    position: relative;
+    padding: 4px 5px 0;
+}
+
+.showcase-category {
+    font-family:
+        "Share Tech Mono",
+        monospace;
+
+    color: var(--cyan);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.showcase-info h3 {
+    margin: 8px 0 15px;
+
+    color: var(--text);
+
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.showcase-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase-bottom strong {
+    color: var(--pink);
+    font-size: 20px;
+}
+
+.showcase-rating {
+    color: #ffd25a;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* DECORATION */
+.floating-dot {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.dot-1 {
+    width: 10px;
+    height: 10px;
+
+    top: 75px;
+    right: 70px;
+
+    background: var(--pink);
+
+    box-shadow:
+        0 0 20px rgba(255, 47, 118, 0.8);
+
+    animation:
+        floatingSmall 3s ease-in-out infinite;
+}
+
+.dot-2 {
+    width: 7px;
+    height: 7px;
+
+    bottom: 80px;
+    left: 70px;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 18px rgba(67, 223, 244, 0.8);
+
+    animation:
+        floatingSmall 4s ease-in-out infinite reverse;
+}
+
+.dot-3 {
+    width: 5px;
+    height: 5px;
+
+    top: 145px;
+    left: 45px;
+
+    background: var(--pink);
+
+    animation:
+        floatingSmall 2.5s ease-in-out infinite;
+}
+
+.floating-plus {
+    position: absolute;
+
+    pointer-events: none;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 28px;
+}
+
+.plus-1 {
+    right: 20px;
+    bottom: 80px;
+
+    color: rgba(67, 223, 244, 0.55);
+
+    animation:
+        floatingSmall 4s ease-in-out infinite;
+}
+
+.plus-2 {
+    top: 80px;
+    left: 15px;
+
+    color: rgba(255, 47, 118, 0.65);
+
+    animation:
+        floatingSmall 3.5s ease-in-out infinite reverse;
+}
+
+/* ANIMATION */
+@keyframes showcaseFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotateY(-8deg)
+            rotateX(3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotateY(-5deg)
+            rotateX(3deg);
+    }
+}
+
+@keyframes showcaseGlow {
+
+    0%,
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+@keyframes floatingSmall {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-12px);
+        opacity: 1;
+    }
+}
+
+/* LIGHT MODE */
+body.light-mode .showcase-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.97),
+            rgba(245, 247, 250, 0.98)
+        );
+
+    border-color: rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .showcase-info h3 {
+    color: #111827;
+}
+
+/* HACKER MODE */
+body.hacker-mode .showcase-card {
+    background: #020b05;
+
+    border-color: #006b1c;
+
+    box-shadow:
+        0 0 30px rgba(0, 255, 65, 0.15);
+}
+
+body.hacker-mode .showcase-card::before {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00ff41,
+            transparent
+        );
+}
+
+body.hacker-mode .showcase-label {
+    color: #00ff41;
+
+    background:
+        rgba(0, 255, 65, 0.06);
+
+    border-color: #006b1c;
+}
+
+body.hacker-mode .showcase-category,
+body.hacker-mode .showcase-info h3,
+body.hacker-mode .showcase-bottom strong {
+    color: #00ff41;
+}
+
+body.hacker-mode .showcase-rating {
+    color: #00ff41;
+}
+
+body.hacker-mode .showcase-glow {
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 255, 65, 0.18),
+            transparent 70%
+        );
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-showcase {
+        width: 100%;
+        min-height: 480px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+    .hero-showcase {
+        min-height: 430px;
+    }
+
+    .showcase-card {
+        width: 300px;
+        min-height: 390px;
+
+        padding: 18px;
+
+        transform: none;
+
+        animation:
+            showcaseFloatMobile 5s ease-in-out infinite;
+    }
+
+    .product-visual {
+        height: 220px;
+    }
+
+    .product-visual img {
+        width: 225px;
+        height: 190px;
+    }
+
+    .showcase-info h3 {
+        font-size: 23px;
+    }
+
+    .showcase-bottom strong {
+        font-size: 17px;
+    }
+}
+
+@keyframes showcaseFloatMobile {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

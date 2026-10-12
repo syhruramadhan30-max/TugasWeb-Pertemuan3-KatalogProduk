@@ -1,0 +1,1019 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syahru Store | Katalog Produk</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand" href="#">
+            <span class="brand-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="url(#brandGrad)" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="brandGrad" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="var(--cyan)" />
+                            <stop offset="1" stop-color="var(--pink)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
+            <span class="brand-name">Syahru<span class="brand-accent">Store</span></span>
+        </a>
+
+        <!-- DIGITAL CLOCK -->
+
+        <div class="digital-clock" id="digitalClock">
+
+            00:00:00
+
+        </div>
+
+
+        <!-- MODE SELECTOR -->
+
+        <div class="mode-selector">
+
+            <span class="mode-label">
+                
+            </span>
+
+
+            <button
+                class="mode-btn active"
+                data-mode="dark"
+                type="button"
+            >
+                🌙 DARK
+            </button>
+
+
+            <button
+                class="mode-btn"
+                data-mode="light"
+                type="button"
+            >
+                ☀️ LIGHT
+            </button>
+
+
+            <button
+                class="mode-btn"
+                data-mode="hacker"
+                type="button"
+            >
+                💻 HACKER
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="#home"
+                    >
+                        Beranda
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#produk"
+                    >
+                        Produk
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#tentang"
+                    >
+                        Tentang
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<header
+    id="home"
+    class="hero"
+>
+
+    <div class="container hero-container">
+
+        <!-- =========================
+             HERO LEFT
+        ========================== -->
+
+        <div class="hero-content">
+
+            <p class="label">
+                KATALOG PRODUK • 2026
+            </p>
+
+            <h1>
+                Temukan Produk
+                <span>
+                    Pilihanmu
+                </span>
+            </h1>
+
+            <p class="hero-text">
+
+                Temukan berbagai produk pilihan dengan tampilan
+                modern, sederhana, dan responsif untuk perangkat
+                mobile, tablet, maupun desktop.
+
+            </p>
+
+            <a
+                href="#produk"
+                class="btn btn-main"
+            >
+                Lihat Produk
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             HERO RIGHT
+             FEATURED PRODUCT
+        ========================== -->
+
+        <div class="hero-showcase">
+
+            <!-- Glow belakang -->
+            <div class="showcase-glow"></div>
+
+
+            <!-- Kartu Produk -->
+            <div class="showcase-card">
+
+                <div class="showcase-label">
+                    FEATURED PRODUCT
+                </div>
+
+
+                <!-- Produk -->
+                <div class="product-visual">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+                        alt="Urban Runner"
+                    >
+
+                </div>
+
+
+                <!-- Informasi -->
+                <div class="showcase-info">
+
+                    <span class="showcase-category">
+                        FOOTWEAR
+                    </span>
+
+                    <h3>
+                        URBAN RUNNER
+                    </h3>
+
+
+                    <div class="showcase-bottom">
+
+                        <strong>
+                            Rp349.000
+                        </strong>
+
+                        <span class="showcase-rating">
+                            ★★★★★
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 DEKORASI FLOATING
+            ========================== -->
+
+            <span class="floating-dot dot-1"></span>
+
+            <span class="floating-dot dot-2"></span>
+
+            <span class="floating-dot dot-3"></span>
+
+            <span class="floating-plus plus-1">
+                +
+            </span>
+
+            <span class="floating-plus plus-2">
+                ✦
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ==================================================
+     PRODUK
+================================================== -->
+
+<section
+    id="produk"
+    class="product-section"
+>
+
+    <div class="container">
+
+
+        <!-- TITLE -->
+
+        <div class="section-title">
+
+            <div>
+
+                <p class="label">
+                    KOLEKSI PRODUK
+                </p>
+
+                <h2>
+                    Produk Pilihan
+                </h2>
+
+            </div>
+
+
+            <p class="product-count">
+                8 Produk
+            </p>
+
+        </div>
+
+
+
+        <!-- PRODUCT GRID -->
+
+        <div class="row g-4">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+                            alt="Sepatu Urban Runner"
+                        >
+
+                        <span class="product-badge">
+                            BEST SELLER
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            FOOTWEAR
+                        </small>
+
+                        <h3>
+                            Urban Runner
+                        </h3>
+
+                        <p>
+                            Sepatu olahraga ringan dan nyaman
+                            untuk aktivitas sehari-hari.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp349.000
+                            </strong>
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+                            alt="Smart Watch X1"
+                        >
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            GADGET
+                        </small>
+
+                        <h3>
+                            Smart Watch X1
+                        </h3>
+
+                        <p>
+                            Jam pintar dengan desain minimalis
+                            untuk menemani aktivitas.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp599.000
+                            </strong>
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
+                            alt="Wave Headset"
+                        >
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            AUDIO
+                        </small>
+
+                        <h3>
+                            Wave Headset
+                        </h3>
+
+                        <p>
+                            Headphone wireless nyaman untuk belajar,
+                            bekerja, dan hiburan.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp429.000
+                            </strong>
+
+                            <span>
+                                ★ 4.7
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+                            alt="Basic Tee"
+                        >
+
+                        <span class="product-badge">
+                            SALE
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            FASHION
+                        </small>
+
+                        <h3>
+                            Basic Tee
+                        </h3>
+
+                        <p>
+                            Kaos basic dengan bahan nyaman
+                            dan desain sederhana.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp129.000
+                            </strong>
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+                            alt="Daily Backpack"
+                        >
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            BAGS
+                        </small>
+
+                        <h3>
+                            Daily Backpack
+                        </h3>
+
+                        <p>
+                            Tas ransel praktis untuk kuliah,
+                            kerja, dan perjalanan.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp279.000
+                            </strong>
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=85"
+                            alt="Hydro Bottle"
+                        >
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            LIFESTYLE
+                        </small>
+
+                        <h3>
+                            Hydro Bottle
+                        </h3>
+
+                        <p>
+                            Botol minum reusable yang praktis
+                            untuk kegiatan sehari-hari.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp159.000
+                            </strong>
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 7 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85"
+                            alt="Desk Lamp"
+                        >
+
+                        <span class="product-badge">
+                            POPULAR
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            HOME
+                        </small>
+
+                        <h3>
+                            Desk Lamp Pro
+                        </h3>
+
+                        <p>
+                            Lampu meja modern untuk ruang belajar
+                            dan ruang kerja.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp219.000
+                            </strong>
+
+                            <span>
+                                ★ 4.7
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card h-100">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85"
+                            alt="Focus Notebook"
+                        >
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <small>
+                            STATIONERY
+                        </small>
+
+                        <h3>
+                            Focus Notebook
+                        </h3>
+
+                        <p>
+                            Buku catatan untuk mencatat ide,
+                            tugas, dan rencana harian.
+                        </p>
+
+
+                        <div class="price">
+
+                            <strong>
+                                Rp89.000
+                            </strong>
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                        </div>
+
+
+                        <button class="btn btn-product">
+                            Tambah ke Keranjang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     TENTANG
+================================================== -->
+
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <span>
+                @ 2026 Syahru Ramadhan Nasution
+            </span> 
+        
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+/* ==================================================
+   DIGITAL CLOCK
+================================================== */
+
+function updateClock() {
+
+    const now = new Date();
+
+    const hours =
+        String(now.getHours()).padStart(2, "0");
+
+    const minutes =
+        String(now.getMinutes()).padStart(2, "0");
+
+    const seconds =
+        String(now.getSeconds()).padStart(2, "0");
+
+
+    document.getElementById("digitalClock").textContent =
+        `${hours}:${minutes}:${seconds}`;
+
+}
+
+
+updateClock();
+
+setInterval(updateClock, 1000);
+
+
+
+/* ==================================================
+   MODE SYSTEM
+================================================== */
+
+const modeButtons =
+    document.querySelectorAll(".mode-btn");
+
+
+function setMode(mode) {
+
+    /* Hapus semua mode */
+
+    document.body.classList.remove(
+        "light-mode",
+        "hacker-mode"
+    );
+
+
+    /* Aktifkan mode */
+
+    if (mode === "light") {
+
+        document.body.classList.add(
+            "light-mode"
+        );
+
+    }
+
+
+    if (mode === "hacker") {
+
+        document.body.classList.add(
+            "hacker-mode"
+        );
+
+    }
+
+
+    /* Tombol aktif */
+
+    modeButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (
+            button.dataset.mode === mode
+        ) {
+
+            button.classList.add("active");
+
+        }
+
+    });
+
+
+    /* Simpan mode */
+
+    localStorage.setItem(
+        "theme",
+        mode
+    );
+
+}
+
+
+
+/* ==================================================
+   BUTTON CLICK
+================================================== */
+
+modeButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        function () {
+
+            const selectedMode =
+                this.dataset.mode;
+
+            setMode(selectedMode);
+
+        }
+    );
+
+});
+
+
+
+/* ==================================================
+   LOAD MODE TERAKHIR
+================================================== */
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+
+if (
+    savedTheme === "light" ||
+    savedTheme === "hacker"
+) {
+
+    setMode(savedTheme);
+
+} else {
+
+    setMode("dark");
+
+}
+
+</script>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
+```
